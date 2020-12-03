@@ -2,7 +2,7 @@ use common::files;
 use regex::Regex;
 
 fn main() {
-    let lines = files::get_file_lines("day02.txt");
+    let lines = files::get_file_lines("input/day02.txt");
 
     println!("part1: {:?}", solve_part1(&lines));
     println!("part2: {:?}", solve_part2(&lines));

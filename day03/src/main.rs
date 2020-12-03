@@ -1,7 +1,7 @@
 use common::files;
 
 fn main() {
-    let lines = files::get_file_lines("day03.txt");
+    let lines = files::get_file_lines("input/day03.txt");
 
     println!("part1: {:?}", solve_part1(&lines));
     println!("part2: {:?}", solve_part2(&lines));

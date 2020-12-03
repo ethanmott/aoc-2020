@@ -10,7 +10,7 @@ pub mod files {
     use std::io::BufReader;
 
     pub fn get_file_bytes(file_name: &str) -> Vec<u8> {
-        let mut file = File::open(format!("input/{}", file_name))
+        let mut file = File::open(file_name)
             .expect(format!("Couldn't find file with name: {}", file_name).as_str());
 
         let mut buf = Vec::new();
@@ -20,7 +20,7 @@ pub mod files {
     }
 
     pub fn get_file_lines(file_name: &str) -> Vec<String> {
-        let file = File::open(format!("input/{}", file_name))
+        let file = File::open(file_name)
             .expect(format!("Couldn't find file with name: {}", file_name).as_str());
 
         BufReader::new(file)
@@ -30,7 +30,7 @@ pub mod files {
     }
 
     pub fn get_file_as_string(file_name: &str) -> String {
-        read_to_string(format!("input/{}", file_name))
+        read_to_string(file_name)
             .expect(format!("Couldn't read file with name: {} to a string", file_name).as_str())
     }
 }
